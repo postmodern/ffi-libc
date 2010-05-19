@@ -19,6 +19,10 @@ module FFI
     attach_function :free, [:pointer], :void
     attach_function :realloc, [:pointer, :size_t], :pointer
 
+    # sys/mman.h
+    attach_function :mmap, [:pointer, :size_t, :int, :int, :int, :off_t], :pointer
+    attach_function :munmap, [:pointer, :size_t], :int
+
     # string.h
     attach_function :bzero, [:pointer, :size_t], :void
     attach_function :memset, [:pointer, :int, :size_t], :pointer

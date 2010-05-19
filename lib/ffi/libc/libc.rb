@@ -24,6 +24,10 @@ module FFI
     attach_function :malloc, [:size_t], :pointer
     attach_function :free, [:pointer], :void
     attach_function :realloc, [:pointer, :size_t], :pointer
+    attach_function :getenv, [:string], :string
+    attach_function :putenv, [:string], :int
+    attach_function :unsetenv, [:string], :int
+    attach_function :clearenv, [], :int
 
     # time.h
     attach_function :time, [:pointer], :time_t

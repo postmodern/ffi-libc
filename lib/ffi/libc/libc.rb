@@ -13,6 +13,12 @@ module FFI
     attach_variable :sys_nerr, :int
     attach_variable :errno, :int
 
+    # stdlib.h
+    attach_function :calloc, [:size_t, :size_t], :pointer
+    attach_function :malloc, [:size_t], :pointer
+    attach_function :free, [:pointer], :void
+    attach_function :realloc, [:pointer, :size_t], :pointer
+
     # string.h
     attach_function :bzero, [:pointer, :size_t], :void
     attach_function :memset, [:pointer, :int, :size_t], :pointer

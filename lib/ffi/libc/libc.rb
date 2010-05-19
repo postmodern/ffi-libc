@@ -13,11 +13,18 @@ module FFI
     attach_variable :sys_nerr, :int
     attach_variable :errno, :int
 
+    # unistd.h
+    attach_function :brk, [:pointer], :int
+    attach_function :sbrk, [:pointer], :pointer
+
     # stdlib.h
     attach_function :calloc, [:size_t, :size_t], :pointer
     attach_function :malloc, [:size_t], :pointer
     attach_function :free, [:pointer], :void
     attach_function :realloc, [:pointer, :size_t], :pointer
+
+    # time
+    attach_function :time, [:pointer], :time_t
 
     # sys/mman.h
     attach_function :mmap, [:pointer, :size_t, :int, :int, :int, :off_t], :pointer

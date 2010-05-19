@@ -27,8 +27,11 @@ Gem::Specification.new do |s|
     "README.md",
     "Rakefile",
     "VERSION",
+    "ffi-libc.gemspec",
     "lib/ffi/libc.rb",
     "lib/ffi/libc/libc.rb",
+    "lib/ffi/libc/timeval.rb",
+    "lib/ffi/libc/timezone.rb",
     "lib/ffi/libc/types.rb"
   ]
   s.has_rdoc = %q{yard}

@@ -7,7 +7,8 @@ module FFI
     typedef :uint, :size_t
     typedef :int, :ssize_t
     typedef :uint, :off_t
-    typedef :uint, :time_t
+    typedef :ulong, :time_t
+    typedef :long, :suseconds_t
     typedef :pointer, :FILE
   end
 end

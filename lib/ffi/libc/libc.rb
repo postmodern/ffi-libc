@@ -1,4 +1,6 @@
 require 'ffi/libc/types'
+require 'ffi/libc/timeval'
+require 'ffi/libc/timezone'
 
 require 'ffi'
 
@@ -23,8 +25,12 @@ module FFI
     attach_function :free, [:pointer], :void
     attach_function :realloc, [:pointer, :size_t], :pointer
 
-    # time
+    # time.h
     attach_function :time, [:pointer], :time_t
+
+    # sys/time.h
+    attach_function :gettimeofday, [:pointer, :pointer], :int
+    attach_function :settimeofday, [:pointer, :pointer], :int
 
     # sys/mman.h
     attach_function :mmap, [:pointer, :size_t, :int, :int, :int, :off_t], :pointer

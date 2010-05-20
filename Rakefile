@@ -21,7 +21,6 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = %Q{http://github.com/postmodern/ffi-libc}
   gem.description = %Q{Useful Ruby FFI bindings for libc.}
   gem.authors = ['Postmodern']
-  gem.add_development_dependency 'bundler', '~> 0.9.23'
   gem.has_rdoc = 'yard'
 end
 

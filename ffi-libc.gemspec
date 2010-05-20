@@ -51,14 +51,12 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rake>, ["~> 0.8.7"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.4.0"])
       s.add_development_dependency(%q<rspec>, ["~> 1.3.0"])
-      s.add_development_dependency(%q<bundler>, ["~> 0.9.23"])
     else
       s.add_dependency(%q<ffi>, ["~> 0.6.0"])
       s.add_dependency(%q<bundler>, ["~> 0.9.25"])
       s.add_dependency(%q<rake>, ["~> 0.8.7"])
       s.add_dependency(%q<jeweler>, ["~> 1.4.0"])
       s.add_dependency(%q<rspec>, ["~> 1.3.0"])
-      s.add_dependency(%q<bundler>, ["~> 0.9.23"])
     end
   else
     s.add_dependency(%q<ffi>, ["~> 0.6.0"])
@@ -66,7 +64,6 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rake>, ["~> 0.8.7"])
     s.add_dependency(%q<jeweler>, ["~> 1.4.0"])
     s.add_dependency(%q<rspec>, ["~> 1.3.0"])
-    s.add_dependency(%q<bundler>, ["~> 0.9.23"])
   end
 end
 

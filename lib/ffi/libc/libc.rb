@@ -58,24 +58,24 @@ module FFI
     attach_function :strerror, [:int], :string
 
     # stdio.h
-    attach_function :fopen, [:string, :string], :FILE
-    attach_function :fdopen, [:int, :string], :FILE
-    attach_function :freopen, [:string, :string, :FILE], :FILE
-    attach_function :fseek, [:FILE, :long, :int], :int
-    attach_function :ftell, [:FILE], :long
-    attach_function :rewind, [:FILE], :void
-    attach_function :fread, [:pointer, :size_t, :size_t, :FILE], :size_t
-    attach_function :fwrite, [:pointer, :size_t, :size_t, :FILE], :size_t
-    attach_function :fgetc, [:FILE], :int
-    attach_function :fgets, [:pointer, :int, :FILE], :pointer
-    attach_function :fputc, [:int, :FILE], :int
-    attach_function :fputs, [:string, :FILE], :int
-    attach_function :fflush, [:FILE], :int
-    attach_function :fclose, [:FILE], :int
-    attach_function :clearerr, [:FILE], :void
-    attach_function :feof, [:FILE], :int
-    attach_function :ferror, [:FILE], :int
-    attach_function :fileno, [:FILE], :int
+    attach_function :fopen, [:string, :string], :pointer
+    attach_function :fdopen, [:int, :string], :pointer
+    attach_function :freopen, [:string, :string, :pointer], :pointer
+    attach_function :fseek, [:pointer, :long, :int], :int
+    attach_function :ftell, [:pointer], :long
+    attach_function :rewind, [:pointer], :void
+    attach_function :fread, [:pointer, :size_t, :size_t, :pointer], :size_t
+    attach_function :fwrite, [:pointer, :size_t, :size_t, :pointer], :size_t
+    attach_function :fgetc, [:pointer], :int
+    attach_function :fgets, [:pointer, :int, :pointer], :pointer
+    attach_function :fputc, [:int, :pointer], :int
+    attach_function :fputs, [:string, :pointer], :int
+    attach_function :fflush, [:pointer], :int
+    attach_function :fclose, [:pointer], :int
+    attach_function :clearerr, [:pointer], :void
+    attach_function :feof, [:pointer], :int
+    attach_function :ferror, [:pointer], :int
+    attach_function :fileno, [:pointer], :int
     attach_function :perror, [:string], :void
   end
 end

@@ -9,5 +9,6 @@ module FFI
     typedef :uint, :off_t
     typedef :ulong, :time_t
     typedef :long, :suseconds_t
+    typedef :pointer, :FILE
   end
 end

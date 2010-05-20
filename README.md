@@ -10,6 +10,9 @@ Useful Ruby FFI bindings for `libc`.
 
 ## Features
 
+* Provides common Structs used in `libc`.
+* Binds to common functions and global variables in `libc`.
+
 ## Examples
 
 ## Requirements

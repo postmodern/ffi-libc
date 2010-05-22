@@ -5,5 +5,7 @@ module FFI
     extend FFI::Library
 
     typedef :pointer, :FILE
+    typedef :uint32, :in_addr_t
+    typedef :uint16, :in_port_t
   end
 end

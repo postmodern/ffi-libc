@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ffi-libc}
-  s.version = "0.0.1"
+  s.version = "0.0.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Postmodern"]
-  s.date = %q{2010-05-19}
+  s.date = %q{2010-05-21}
   s.description = %q{Useful Ruby FFI bindings for libc.}
   s.email = %q{postmodern.mod3@gmail.com}
   s.extra_rdoc_files = [
@@ -29,7 +29,15 @@ Gem::Specification.new do |s|
     "VERSION",
     "ffi-libc.gemspec",
     "lib/ffi/libc.rb",
+    "lib/ffi/libc/af.rb",
+    "lib/ffi/libc/in6_addr.rb",
+    "lib/ffi/libc/in_addr.rb",
     "lib/ffi/libc/libc.rb",
+    "lib/ffi/libc/sock_addr.rb",
+    "lib/ffi/libc/sock_addr_dl.rb",
+    "lib/ffi/libc/sock_addr_family.rb",
+    "lib/ffi/libc/sock_addr_in.rb",
+    "lib/ffi/libc/sock_addr_in6.rb",
     "lib/ffi/libc/timeval.rb",
     "lib/ffi/libc/timezone.rb",
     "lib/ffi/libc/types.rb"

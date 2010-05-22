@@ -13,11 +13,9 @@ Useful Ruby FFI bindings for `libc`.
 * Provides common Structs used in `libc`.
 * Binds to common functions and global variables in `libc`.
 
-## Examples
-
 ## Requirements
 
-* [ffi](http://github.com/ffi/ffi) >= 0.6.0
+* [ffi](http://github.com/ffi/ffi) ~> 0.6.0
 
 ## Install
 

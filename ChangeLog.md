@@ -1,3 +1,14 @@
+### 0.0.2 / 2010-05-21
+
+* Removed a duplicate typedef of the `size_t` type.
+* Added the Structs:
+  * {FFI::LibC::InAddr}.
+  * {FFI::LibC::In6Addr}.
+  * {FFI::LibC::SockAddr}.
+  * {FFI::LibC::SockAddrDL}.
+  * {FFI::LibC::SockAddrIn}.
+  * {FFI::LibC::SockAddrIn6}.
+
 ### 0.0.1 / 2010-05-19
 
 * Initial release.

@@ -18,6 +18,8 @@ module FFI
     # unistd.h
     attach_function :brk, [:pointer], :int
     attach_function :sbrk, [:pointer], :pointer
+    attach_function :getpid, [], :pid_t
+    attach_function :getppid, [], :pid_t
 
     # stdlib.h
     attach_function :calloc, [:size_t, :size_t], :pointer

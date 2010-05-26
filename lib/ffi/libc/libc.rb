@@ -22,6 +22,8 @@ module FFI
     attach_function :getppid, [], :pid_t
     attach_function :getuid, [], :uid_t
     attach_function :geteuid, [], :uid_t
+    attach_function :getgid, [], :gid_t
+    attach_function :getegid, [], :gid_t
 
     # stdlib.h
     attach_function :calloc, [:size_t, :size_t], :pointer

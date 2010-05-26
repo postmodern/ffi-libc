@@ -20,6 +20,8 @@ module FFI
     attach_function :sbrk, [:pointer], :pointer
     attach_function :getpid, [], :pid_t
     attach_function :getppid, [], :pid_t
+    attach_function :getuid, [], :uid_t
+    attach_function :geteuid, [], :uid_t
 
     # stdlib.h
     attach_function :calloc, [:size_t, :size_t], :pointer

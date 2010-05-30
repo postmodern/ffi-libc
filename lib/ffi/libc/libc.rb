@@ -8,7 +8,7 @@ module FFI
   module LibC
     extend FFI::Library
 
-    ffi_lib 'c'
+    ffi_lib [FFI::CURRENT_PROCESS, 'c']
 
     # errno.h
     attach_variable :sys_errlist, :pointer

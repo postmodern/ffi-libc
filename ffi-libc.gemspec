@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Postmodern"]
-  s.date = %q{2010-05-21}
+  s.date = %q{2010-08-03}
   s.description = %q{Useful Ruby FFI bindings for libc.}
   s.email = %q{postmodern.mod3@gmail.com}
   s.extra_rdoc_files = [

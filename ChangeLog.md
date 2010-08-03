@@ -1,3 +1,10 @@
+### 0.0.3 / 2010-08-03
+
+* Load libc from the current process.
+* Added `getgid` and `getegid`.
+* Added `getuid` and `geteuid`.
+* Added `getpid` and `getppid`.
+
 ### 0.0.2 / 2010-05-21
 
 * Removed a duplicate typedef of the `size_t` type.

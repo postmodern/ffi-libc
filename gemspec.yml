@@ -12,7 +12,6 @@ dependencies:
   ffi: ~> 0.6.0
 
 development_dependencies:
-  ore: ~> 0.2.0
-  ore-tasks: ~> 0.1.2
+  ore-tasks: ~> 0.2.0
   rspec: ~> 2.0.0
   yard: ~> 0.6.0

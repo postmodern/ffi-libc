@@ -1,8 +1,9 @@
 # ffi-libc
 
-* [github.com/postmodern/ffi-libc](http://github.com/postmodern/ffi-libc/)
-* [github.com/postmodern/ffi-libc/issues](http://github.com/postmodern/ffi-libc/issues)
-* Postmodern (postmodern.mod3 at gmail.com)
+* [Source](http://github.com/postmodern/ffi-libc/)
+* [Issues](http://github.com/postmodern/ffi-libc/issues)
+* [Documentation](http://rubydoc.info/gems/ffi-libc)
+* [Email](postmodern.mod3 at gmail.com)
 
 ## Description
 

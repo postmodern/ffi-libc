@@ -1,3 +1,12 @@
+### 0.0.4 / 2011-02-03
+
+* Require ffi >= 0.6.0, <= 1.1.0:
+  * JRuby requires ffi >= 1.0.0.
+  * A lot of projects still require ffi ~> 0.6.0.
+* Added `stdin`.
+* Added `stdout`.
+* Added `stderr`.
+
 ### 0.0.3 / 2010-08-03
 
 * Load libc from the current process.

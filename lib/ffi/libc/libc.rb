@@ -79,7 +79,7 @@ module FFI
       attach_variable :stdout, :pointer
       attach_variable :stderr, :pointer
     rescue FFI::NotFoundError
-      # stdio.h is not available on OSX
+      # stdin, stdout, stderr are not available on OSX
     end
     
     attach_function :fopen, [:string, :string], :FILE

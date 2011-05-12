@@ -33,7 +33,12 @@ module FFI
     attach_function :getenv, [:string], :string
     attach_function :putenv, [:string], :int
     attach_function :unsetenv, [:string], :int
-    attach_function :clearenv, [], :int
+
+    begin
+      attach_function :clearenv, [], :int
+    rescue FFI::NotFoundError
+      # clearenv is not available on OSX
+    end
 
     # time.h
     attach_function :time, [:pointer], :time_t

@@ -57,7 +57,13 @@ module FFI
     attach_function :memcpy, [:pointer, :pointer, :size_t], :pointer
     attach_function :memcmp, [:pointer, :pointer, :size_t], :int
     attach_function :memchr, [:pointer, :int, :size_t], :pointer
-    attach_function :memrchr, [:pointer, :int, :size_t], :pointer
+
+    begin
+      attach_function :memrchr, [:pointer, :int, :size_t], :pointer
+    rescue FFI::NotFoundError
+      # memrchr is not available on OSX
+    end
+
     attach_function :strcpy, [:string, :string], :pointer
     attach_function :strncpy, [:string, :string, :size_t], :pointer
     attach_function :strlen, [:string], :size_t

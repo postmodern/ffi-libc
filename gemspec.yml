@@ -1,5 +1,5 @@
 name: ffi-libc
-version: 0.0.4
+version: 0.0.5
 summary: Useful FFI bindings for libc
 description: Useful Ruby FFI bindings for libc.
 license: MIT

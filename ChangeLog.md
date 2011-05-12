@@ -1,3 +1,9 @@
+### 0.0.5 / 2011-05-11
+
+* Skip `clearenv`, `memrchr`, `stdin`, `stdout` and `stderr` if they cannot
+  be loaded (thanks FreneticEntropy and mephux).
+  * The `libc` installed on OSX lacks these functions/global-variables.
+
 ### 0.0.4 / 2011-02-03
 
 * Require ffi >= 0.6.0, <= 1.1.0:

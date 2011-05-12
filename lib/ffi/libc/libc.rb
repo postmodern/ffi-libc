@@ -77,12 +77,11 @@ module FFI
     # stdio.h
     begin
       attach_variable :stdin, :pointer
+      attach_variable :stdout, :pointer
+      attach_variable :stderr, :pointer
     rescue FFI::NotFoundError
       # memrchr is not available on OSX
     end
-    
-    attach_variable :stdout, :pointer
-    attach_variable :stderr, :pointer
     
 
     attach_function :fopen, [:string, :string], :FILE

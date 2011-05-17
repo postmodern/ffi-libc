@@ -101,5 +101,9 @@ module FFI
     attach_function :ferror, [:FILE], :int
     attach_function :fileno, [:FILE], :int
     attach_function :perror, [:string], :void
+
+    attach_function :putc, [:int, :FILE], :int
+    attach_function :putchar, [:int], :int
+    attach_function :puts, [:string], :int
   end
 end

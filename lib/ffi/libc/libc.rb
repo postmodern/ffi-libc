@@ -64,8 +64,8 @@ module FFI
       # memrchr is not available on OSX
     end
 
-    attach_function :strcpy, [:string, :string], :pointer
-    attach_function :strncpy, [:string, :string, :size_t], :pointer
+    attach_function :strcpy, [:pointer, :string], :pointer
+    attach_function :strncpy, [:pointer, :string, :size_t], :pointer
     attach_function :strlen, [:string], :size_t
     attach_function :index, [:string, :int], :string
     attach_function :rindex, [:string, :int], :string

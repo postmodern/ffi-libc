@@ -66,6 +66,8 @@ module FFI
 
     attach_function :strcpy, [:buffer_out, :string], :pointer
     attach_function :strncpy, [:buffer_out, :string, :size_t], :pointer
+    attach_function :strcmp, [:buffer_in, :buffer_in], :int
+    attach_function :strncmp, [:buffer_in, :buffer_in, :size_t], :int
     attach_function :strlen, [:buffer_in], :size_t
     attach_function :index, [:buffer_in, :int], :pointer
     attach_function :rindex, [:buffer_in, :int], :pointer

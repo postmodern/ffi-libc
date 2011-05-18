@@ -26,7 +26,7 @@ module FFI
     attach_function :getegid, [], :gid_t
 
     # stdlib.h
-    attach_function :calloc, [:size_t, :size_t], :pointer
+    attach_function :calloc, [:size_t, :size_t], :buffer_inout
     attach_function :malloc, [:size_t], :pointer
     attach_function :free, [:pointer], :void
     attach_function :realloc, [:pointer, :size_t], :pointer
@@ -54,24 +54,24 @@ module FFI
     # string.h
     attach_function :bzero, [:pointer, :size_t], :void
     attach_function :memset, [:pointer, :int, :size_t], :pointer
-    attach_function :memcpy, [:pointer, :pointer, :size_t], :pointer
-    attach_function :memcmp, [:pointer, :pointer, :size_t], :int
-    attach_function :memchr, [:pointer, :int, :size_t], :pointer
+    attach_function :memcpy, [:buffer_out, :buffer_in, :size_t], :pointer
+    attach_function :memcmp, [:buffer_in, :buffer_in, :size_t], :int
+    attach_function :memchr, [:buffer_in, :int, :size_t], :pointer
 
     begin
-      attach_function :memrchr, [:pointer, :int, :size_t], :pointer
+      attach_function :memrchr, [:buffer_in, :int, :size_t], :pointer
     rescue FFI::NotFoundError
       # memrchr is not available on OSX
     end
 
-    attach_function :strcpy, [:pointer, :string], :pointer
-    attach_function :strncpy, [:pointer, :string, :size_t], :pointer
-    attach_function :strlen, [:string], :size_t
-    attach_function :index, [:string, :int], :string
-    attach_function :rindex, [:string, :int], :string
-    attach_function :strchr, [:string, :int], :string
-    attach_function :strrchr, [:string, :int], :string
-    attach_function :strstr, [:string, :string], :string
+    attach_function :strcpy, [:buffer_out, :string], :pointer
+    attach_function :strncpy, [:buffer_out, :string, :size_t], :pointer
+    attach_function :strlen, [:buffer_in], :size_t
+    attach_function :index, [:buffer_in, :int], :pointer
+    attach_function :rindex, [:buffer_in, :int], :pointer
+    attach_function :strchr, [:buffer_in, :int], :pointer
+    attach_function :strrchr, [:buffer_in, :int], :pointer
+    attach_function :strstr, [:buffer_in, :string], :pointer
     attach_function :strerror, [:int], :string
     
     begin
@@ -88,10 +88,10 @@ module FFI
     attach_function :fseek, [:FILE, :long, :int], :int
     attach_function :ftell, [:FILE], :long
     attach_function :rewind, [:FILE], :void
-    attach_function :fread, [:pointer, :size_t, :size_t, :FILE], :size_t
-    attach_function :fwrite, [:pointer, :size_t, :size_t, :FILE], :size_t
+    attach_function :fread, [:buffer_out, :size_t, :size_t, :FILE], :size_t
+    attach_function :fwrite, [:buffer_in, :size_t, :size_t, :FILE], :size_t
     attach_function :fgetc, [:FILE], :int
-    attach_function :fgets, [:pointer, :int, :FILE], :pointer
+    attach_function :fgets, [:buffer_out, :int, :FILE], :pointer
     attach_function :fputc, [:int, :FILE], :int
     attach_function :fputs, [:string, :FILE], :int
     attach_function :fflush, [:FILE], :int

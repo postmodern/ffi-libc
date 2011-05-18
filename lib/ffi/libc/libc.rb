@@ -95,7 +95,7 @@ module FFI
     attach_function :fgetc, [:FILE], :int
     attach_function :fgets, [:buffer_out, :int, :FILE], :pointer
     attach_function :fputc, [:int, :FILE], :int
-    attach_function :fputs, [:string, :FILE], :int
+    attach_function :fputs, [:buffer_in, :FILE], :int
     attach_function :fflush, [:FILE], :int
     attach_function :fclose, [:FILE], :int
     attach_function :clearerr, [:FILE], :void

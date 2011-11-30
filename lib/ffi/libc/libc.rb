@@ -1,6 +1,7 @@
 require 'ffi/libc/types'
 require 'ffi/libc/timeval'
 require 'ffi/libc/timezone'
+require 'ffi/libc/ifaddrs'
 
 require 'ffi'
 
@@ -107,5 +108,34 @@ module FFI
     attach_function :putc, [:int, :FILE], :int
     attach_function :putchar, [:int], :int
     attach_function :puts, [:string], :int
+
+    # ifaddrs.h
+    attach_function :getnameinfo, [
+      :pointer,
+      :socklen_t, :pointer,
+      :socklen_t, :pointer,
+      :socklen_t, :int
+    ], :int
+
+    attach_function :getifaddrs, [:pointer], :int
+    attach_function :freeifaddrs, [:pointer], :void
+
+    def self.each_ifaddrs
+      ptr = MemoryPointer.new(:pointer)
+
+      if getifaddrs(ptr) == -1
+        raise(strerror(errno))
+      end
+
+      ifaddrs = Ifaddrs.new(ptr.get_pointer(0))
+
+      until ifaddrs.null?
+        yield ifaddrs
+
+        ifaddrs = ifaddrs.next
+      end
+
+      freeifaddrs(ptr.get_pointer(0))
+    end
   end
 end

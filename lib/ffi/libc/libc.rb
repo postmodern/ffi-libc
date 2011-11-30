@@ -19,7 +19,7 @@ module FFI
     attach_variable :errno, :int
 
     def self.raise_error(error=self.errno)
-      raise(strerror(errno))
+      raise(strerror(error))
     end
 
     # unistd.h
@@ -140,7 +140,7 @@ module FFI
       ptr = MemoryPointer.new(:pointer)
 
       if getifaddrs(ptr) == -1
-        raise(strerror(errno))
+        raise_error
       end
 
       ifaddrs = Ifaddrs.new(ptr.get_pointer(0))

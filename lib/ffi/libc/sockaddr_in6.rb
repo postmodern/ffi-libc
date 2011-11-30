@@ -1,4 +1,5 @@
 require 'ffi/libc/types'
+require 'ffi/libc/sockaddr_family'
 require 'ffi/libc/in6_addr'
 
 module FFI
@@ -6,7 +7,7 @@ module FFI
     #
     # IPv6 socket address
     #
-    class SockAddrIn6 < SockAddrFamily
+    class SockaddrIn6 < SockaddrFamily
 
       layout :len, :uint8,
              :family, :sa_family_t,

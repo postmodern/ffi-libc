@@ -1,12 +1,12 @@
 require 'ffi/libc/types'
-require 'ffi/libc/sock_addr_family'
+require 'ffi/libc/sockaddr_family'
 
 module FFI
   module LibC
     #
     # The data-link socket address
     #
-    class SockAddrDL < SockAddrFamily
+    class SockaddrDL < SockaddrFamily
 
       layout :len, :uint8,
              :family, :sa_family_t,

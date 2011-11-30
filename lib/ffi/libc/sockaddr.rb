@@ -1,12 +1,12 @@
 require 'ffi/libc/types'
-require 'ffi/libc/sock_addr_family'
+require 'ffi/libc/sockaddr_family'
 
 module FFI
   module LibC
     #
-    # The generic `sock_addr` structure.
+    # The generic `sockaddr` structure.
     #
-    class SockAddr < SockAddrFamily
+    class Sockaddr < SockaddrFamily
 
       layout :len, :uint8,
              :family, :sa_family_t,

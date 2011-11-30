@@ -1,12 +1,12 @@
 require 'ffi/libc/types'
-require 'ffi/libc/sock_addr_family'
+require 'ffi/libc/sockaddr_family'
 
 module FFI
   module LibC
     #
     # sockaddr inet, always good to have around
     #
-    class SockAddrIn < SockAddrFamily
+    class SockaddrIn < SockaddrFamily
 
       layout :len, :uint8,
              :family, :sa_family_t,

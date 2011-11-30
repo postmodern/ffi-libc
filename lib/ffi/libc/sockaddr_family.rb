@@ -5,7 +5,7 @@ module FFI
     #
     # Common abstract superclass for all sockaddr struct classes
     #
-    class SockAddrFamily < ::FFI::Struct
+    class SockaddrFamily < ::FFI::Struct
 
     end
   end

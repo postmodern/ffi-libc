@@ -11,10 +11,16 @@ module FFI
 
     ffi_lib [FFI::CURRENT_PROCESS, 'c']
 
+    NULL = nil
+
     # errno.h
     attach_variable :sys_errlist, :pointer
     attach_variable :sys_nerr, :int
     attach_variable :errno, :int
+
+    def self.raise_error(error=self.errno)
+      raise(strerror(errno))
+    end
 
     # unistd.h
     attach_function :brk, [:pointer], :int
@@ -109,7 +115,7 @@ module FFI
     attach_function :putchar, [:int], :int
     attach_function :puts, [:string], :int
 
-    # ifaddrs.h
+    # netdb.h
     attach_function :getnameinfo, [
       :pointer,
       :socklen_t, :pointer,
@@ -117,6 +123,16 @@ module FFI
       :socklen_t, :int
     ], :int
 
+    NI_MAXHOST = 1024
+    NI_MAXSERV = 32
+
+    NI_NUMERICHOST = 1       # Don't try to look up hostname.
+    NI_NUMERICSERV = 2       # Don't convert port number to name.
+    NI_NOFQDN      = 4       # Only return nodename portion.
+    NI_NAMEREQD    = 8       # Don't return numeric addresses.
+    NI_DGRAM       = 16      # Look up UDP service rather than TCP.
+
+    # ifaddrs.h
     attach_function :getifaddrs, [:pointer], :int
     attach_function :freeifaddrs, [:pointer], :void
 

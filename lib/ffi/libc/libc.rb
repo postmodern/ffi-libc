@@ -2,6 +2,7 @@ require 'ffi/libc/types'
 require 'ffi/libc/timeval'
 require 'ffi/libc/timezone'
 require 'ffi/libc/ifaddrs'
+require 'ffi/libc/rusage'
 
 require 'ffi'
 
@@ -82,7 +83,7 @@ module FFI
     attach_function :strrchr, [:buffer_in, :int], :pointer
     attach_function :strstr, [:buffer_in, :string], :pointer
     attach_function :strerror, [:int], :string
-    
+
     begin
       attach_variable :stdin, :pointer
       attach_variable :stdout, :pointer
@@ -90,7 +91,7 @@ module FFI
     rescue FFI::NotFoundError
       # stdin, stdout, stderr are not available on OSX
     end
-    
+
     attach_function :fopen, [:string, :string], :FILE
     attach_function :fdopen, [:int, :string], :FILE
     attach_function :freopen, [:string, :string, :FILE], :FILE
@@ -152,6 +153,21 @@ module FFI
       end
 
       freeifaddrs(ptr.get_pointer(0))
+    end
+
+    # /usr/include/bits/resource.h on Linux
+    # /usr/include/sys/resource.h on Darwin
+    RUSAGE_SELF = 0
+    RUSAGE_CHILDREN = -1
+    RUSAGE_THREAD = 1 # Linux/glibc only
+
+    attach_function :getrusage, [:int, :pointer], :int
+
+    def self.getrusage(who=RUSAGE_SELF)
+      ru = RUsage.new
+      ret = getrusage(who, ru)
+      raise_error(ret) unless ret == 0
+      ru
     end
   end
 end

@@ -32,6 +32,7 @@ module FFI
     attach_function :geteuid, [], :uid_t
     attach_function :getgid, [], :gid_t
     attach_function :getegid, [], :gid_t
+    attach_function :alarm, [:uint], :uint
 
     # stdlib.h
     attach_function :calloc, [:size_t, :size_t], :buffer_inout

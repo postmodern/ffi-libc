@@ -6,4 +6,10 @@ describe "FFI::LibC" do
       require 'ffi/libc/libc'
     }.should_not raise_error(FFI::NotFoundError)
   end
+
+  it "should be able to fetch its own memory usage" do
+    require 'ffi/libc'
+    ru = FFI::LibC.getrusage
+    ru[:ru_maxrss].should be > 4000
+  end
 end

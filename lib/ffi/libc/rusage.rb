@@ -19,7 +19,7 @@ module FFI
              :ru_msgrcv, :long,
              :ru_nsignals, :long,
              :ru_nvcsw, :long,
-             :ru_nivcsw, :long,
+             :ru_nivcsw, :long
     end
   end
 end

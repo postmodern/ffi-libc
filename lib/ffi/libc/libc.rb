@@ -162,11 +162,11 @@ module FFI
     RUSAGE_CHILDREN = -1
     RUSAGE_THREAD = 1 # Linux/glibc only
 
-    attach_function :getrusage, [:int, :pointer], :int
+    attach_function :sys_getrusage, :getrusage, [:int, :pointer], :int
 
     def self.getrusage(who=RUSAGE_SELF)
       ru = RUsage.new
-      ret = getrusage(who, ru)
+      ret = sys_getrusage(who, ru)
       raise_error(ret) unless ret == 0
       ru
     end

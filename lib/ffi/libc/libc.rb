@@ -10,7 +10,7 @@ module FFI
   module LibC
     extend FFI::Library
 
-    ffi_lib [FFI::CURRENT_PROCESS, 'c']
+    ffi_lib FFI::Library::LIBC
 
     NULL = nil
 

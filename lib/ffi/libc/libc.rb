@@ -113,6 +113,11 @@ module FFI
     attach_function :fileno, [:FILE], :int
     attach_function :perror, [:string], :void
 
+    attach_function :getc, [:FILE], :int
+    attach_function :getchar, [], :int
+    attach_function :gets, [:buffer_out], :int
+    attach_function :ungetc, [:int, :pointer], :int
+
     attach_function :putc, [:int, :FILE], :int
     attach_function :putchar, [:int], :int
     attach_function :puts, [:string], :int

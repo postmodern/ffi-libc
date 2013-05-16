@@ -50,6 +50,7 @@ module FFI
     end
 
     # time.h
+    attach_function :clock, [], :clock_t
     attach_function :time, [:pointer], :time_t
 
     # sys/time.h

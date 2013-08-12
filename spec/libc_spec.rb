@@ -4,7 +4,7 @@ describe "FFI::LibC" do
   it "should attach all functions" do
     lambda {
       require 'ffi/libc/libc'
-    }.should_not raise_error(FFI::NotFoundError)
+    }.should_not raise_error
   end
 
   it "should be able to fetch its own memory usage" do

@@ -103,7 +103,7 @@ Useful Ruby FFI bindings for `libc`.
 
 ## Requirements
 
-* [ffi](http://github.com/ffi/ffi) ~> 1.0
+* [ffi] ~> 1.0
 
 ## Install
 
@@ -114,3 +114,5 @@ Useful Ruby FFI bindings for `libc`.
 Copyright (c) 2010-2013 Hal Brodigan
 
 See {file:LICENSE.txt} for license information.
+
+[ffi]: https://github.com/ffi/ffi#readme

@@ -179,8 +179,7 @@ module FFI
       freeifaddrs(ptr.get_pointer(0))
     end
 
-    # /usr/include/bits/resource.h on Linux
-    # /usr/include/sys/resource.h on Darwin
+    # bits/resource.h (Linux) / sys/resource.h (Darwin)
     RUSAGE_SELF = 0
     RUSAGE_CHILDREN = -1
     RUSAGE_THREAD = 1 # Linux/glibc only

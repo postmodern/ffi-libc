@@ -12,6 +12,7 @@ Useful Ruby FFI bindings for `libc`.
 ## Features
 
 * Provides common Structs used in `libc`:
+  * {FFI::LibC::Ifaddrs}
   * {FFI::LibC::In6Addr}
   * {FFI::LibC::InAddr}
   * {FFI::LibC::SockaddrDL}
@@ -21,6 +22,7 @@ Useful Ruby FFI bindings for `libc`.
   * {FFI::LibC::Sockaddr}
   * {FFI::LibC::Timeval}
   * {FFI::LibC::Timezone}
+  * {FFI::LibC::RUsage}
 * Binds to common functions and global variables in `libc`:
   * `errno.h`:
     * `sys_errlist`
@@ -49,6 +51,8 @@ Useful Ruby FFI bindings for `libc`.
   * `sys/time.h`:
     * `gettimeofday`
     * `settimeofday`
+  * `sys/resource.h` / `bits/resource.h`:
+    * `getrusage`
   * `sys/mman.h`:
     * `mmap`
     * `munmap`
@@ -91,6 +95,11 @@ Useful Ruby FFI bindings for `libc`.
     * `ferror`
     * `fileno`
     * `perror`
+  * `netdb.h`:
+    * `getnameinfo`
+  * `ifaddrs.h`:
+    * `getifaddrs`
+    * `freeifaddrs`
 
 ## Requirements
 

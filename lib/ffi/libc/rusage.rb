@@ -3,6 +3,9 @@ require 'ffi/libc/timeval'
 
 module FFI
   module LibC
+    #
+    # @since 0.1.0
+    #
     class RUsage < FFI::Struct
 
       layout :ru_utime, Timeval,

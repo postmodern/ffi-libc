@@ -19,11 +19,13 @@ module FFI
       #
       # Gets the next Interface Address in the list.
       #
-      # @return [Ifaddrs]
+      # @return [Ifaddrs, nil]
       #   The next Interface Address in the list.
       #
       def next
-        Ifaddrs.new(self[:ifa_next])
+        unless self[:ifa_next].null?
+          Ifaddrs.new(self[:ifa_next])
+        end
       end
 
       #

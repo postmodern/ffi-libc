@@ -12,6 +12,7 @@ module FFI
 
     ffi_lib [FFI::CURRENT_PROCESS, 'c']
 
+    # The NULL constant
     NULL = nil
 
     # errno.h

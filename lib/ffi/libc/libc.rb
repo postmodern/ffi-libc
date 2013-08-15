@@ -156,6 +156,8 @@ module FFI
     # @return [Enumerator]
     #   If no block is given, an enumerator will be returned.
     #
+    # @since 0.1.0
+    #
     def self.each_ifaddr
       return enum_for(__method__) unless block_given?
 
@@ -195,6 +197,8 @@ module FFI
     #
     # @raise [RuntimeError]
     #   An error has occurred.
+    #
+    # @since 0.1.0
     #
     def self.rusage(who=RUSAGE_SELF)
       rusage = RUsage.new

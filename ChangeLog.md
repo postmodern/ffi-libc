@@ -17,7 +17,7 @@
 * Added {FFI::LibC::Ifaddrs}.
 * Added {FFI::LibC.raise_error}.
 * Added {FFI::LibC.each_ifaddr}.
-* Added {FFI::LibC.getrusage}.
+* Added {FFI::LibC.rusage}.
 
 ### 0.0.5 / 2011-05-11
 

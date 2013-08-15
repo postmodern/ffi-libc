@@ -144,7 +144,21 @@ module FFI
     attach_function :getifaddrs, [:pointer], :int
     attach_function :freeifaddrs, [:pointer], :void
 
+    #
+    # Enumerates over the Interface Addresses.
+    #
+    # @yield [ifaddr]
+    #   The given block will be passed each Interface Address.
+    #
+    # @yieldparam [Ifaddrs] ifaddr
+    #   An Interface Address.
+    #
+    # @return [Enumerator]
+    #   If no block is given, an enumerator will be returned.
+    #
     def self.each_ifaddrs
+      return enum_for(__method__) unless block_given?
+
       ptr = MemoryPointer.new(:pointer)
 
       if getifaddrs(ptr) == -1

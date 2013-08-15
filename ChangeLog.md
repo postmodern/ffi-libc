@@ -1,3 +1,24 @@
+### 0.1.0 / 2013-08-15
+
+* Require ffi ~> 1.0.
+* Added `alarm`.
+* Added `clock`.
+* Added `getc`.
+* Added `getchar`.
+* Added `gets`.
+* Added `ungetc`.
+* Added `getifaddrs`.
+* Added `puts`.
+* Added `putchar`.
+* Added `putc`.
+* Added `strcmp`.
+* Added `strncmp`.
+* Added {FFI::LibC::NULL}.
+* Added {FFI::LibC::Ifaddrs}.
+* Added {FFI::LibC.raise_error}.
+* Added {FFI::LibC.each_ifaddrs}.
+* Added {FFI::LibC.getrusage}.
+
 ### 0.0.5 / 2011-05-11
 
 * Skip `clearenv`, `memrchr`, `stdin`, `stdout` and `stderr` if they cannot

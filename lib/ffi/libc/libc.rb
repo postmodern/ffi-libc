@@ -168,15 +168,19 @@ module FFI
         raise_error
       end
 
-      ifaddrs = Ifaddrs.new(ptr.get_pointer(0))
-
-      until ifaddrs.null?
-        yield ifaddrs
-
-        ifaddrs = ifaddrs.next
+      if (ifaddrs = ptr.get_pointer(0)).null?
+        return
       end
 
-      freeifaddrs(ptr.get_pointer(0))
+      ifaddr = Ifaddrs.new(ifaddrs)
+
+      while ifaddr
+        yield ifaddr
+
+        ifaddr = ifaddr.next
+      end
+
+      freeifaddrs(ifaddrs)
     end
 
     # bits/resource.h (Linux) / sys/resource.h (Darwin)

@@ -22,6 +22,7 @@ module FFI
 
       def ifa_broadaddr; self[:ifa_ifu][:ifu_broadaddr]; end
       def ifa_dstaddr;   self[:ifa_ifu][:ifu_dstaddr];   end
+
     end
   end
 end

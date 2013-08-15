@@ -156,7 +156,7 @@ module FFI
     # @return [Enumerator]
     #   If no block is given, an enumerator will be returned.
     #
-    def self.each_ifaddrs
+    def self.each_ifaddr
       return enum_for(__method__) unless block_given?
 
       ptr = MemoryPointer.new(:pointer)
@@ -182,7 +182,7 @@ module FFI
     RUSAGE_CHILDREN = -1
     RUSAGE_THREAD = 1 # Linux/glibc only
 
-    attach_function :sys_getrusage, :getrusage, [:int, :pointer], :int
+    attach_function :getrusage, [:int, :pointer], :int
 
     #
     # Gets the RUsage for the user.
@@ -196,10 +196,10 @@ module FFI
     # @raise [RuntimeError]
     #   An error has occurred.
     #
-    def self.getrusage(who=RUSAGE_SELF)
+    def self.rusage(who=RUSAGE_SELF)
       rusage = RUsage.new
 
-      unless (ret = sys_getrusage(who,rusage)) == 0
+      unless (ret = getrusage(who,rusage)) == 0
         raise_error(ret)
       end
 

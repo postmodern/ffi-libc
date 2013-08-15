@@ -107,7 +107,7 @@ Useful Ruby FFI bindings for `libc`.
 
 ## Install
 
-    $ sudo gem install ffi-libc
+    $ gem install ffi-libc
 
 ## License
 

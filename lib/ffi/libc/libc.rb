@@ -36,7 +36,7 @@ module FFI
     attach_function :alarm, [:uint], :uint
 
     # stdlib.h
-    attach_function :calloc, [:size_t, :size_t], :buffer
+    attach_function :calloc, [:size_t, :size_t], :pointer
     attach_function :malloc, [:size_t], :pointer
     attach_function :free, [:pointer], :void
     attach_function :realloc, [:pointer, :size_t], :pointer

@@ -184,6 +184,18 @@ module FFI
 
     attach_function :sys_getrusage, :getrusage, [:int, :pointer], :int
 
+    #
+    # Gets the RUsage for the user.
+    #
+    # @param [RUSAGE_SELF, RUSAGE_CHILDREN, RUSAGE_THREAD] who
+    #   Whome to get RUsage statistics for.
+    #
+    # @return [RUsage]
+    #   The RUsage statistics.
+    #
+    # @raise [RuntimeError]
+    #   An error has occurred.
+    #
     def self.getrusage(who=RUSAGE_SELF)
       rusage = RUsage.new
 

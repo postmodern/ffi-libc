@@ -14,11 +14,11 @@ Useful Ruby FFI bindings for `libc`.
 * Provides common Structs used in `libc`:
   * {FFI::LibC::In6Addr}
   * {FFI::LibC::InAddr}
-  * {FFI::LibC::SockAddrDL}
-  * {FFI::LibC::SockAddrFamily}
-  * {FFI::LibC::SockAddrIn6}
-  * {FFI::LibC::SockAddrIn}
-  * {FFI::LibC::SockAddr}
+  * {FFI::LibC::SockaddrDL}
+  * {FFI::LibC::SockaddrFamily}
+  * {FFI::LibC::SockaddrIn6}
+  * {FFI::LibC::SockaddrIn}
+  * {FFI::LibC::Sockaddr}
   * {FFI::LibC::Timeval}
   * {FFI::LibC::Timezone}
 * Binds to common functions and global variables in `libc`:

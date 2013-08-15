@@ -48,10 +48,10 @@
 * Added the Structs:
   * {FFI::LibC::InAddr}.
   * {FFI::LibC::In6Addr}.
-  * {FFI::LibC::SockAddr}.
-  * {FFI::LibC::SockAddrDL}.
-  * {FFI::LibC::SockAddrIn}.
-  * {FFI::LibC::SockAddrIn6}.
+  * {FFI::LibC::Sockaddr}.
+  * {FFI::LibC::SockaddrDL}.
+  * {FFI::LibC::SockaddrIn}.
+  * {FFI::LibC::SockaddrIn6}.
 
 ### 0.0.1 / 2010-05-19
 

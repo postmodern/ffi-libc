@@ -4,6 +4,7 @@ require 'ffi/libc/timeval'
 module FFI
   module LibC
     class RUsage < FFI::Struct
+
       layout :ru_utime, Timeval,
              :ru_stime, Timeval,
              :ru_maxrss, :long,
@@ -20,6 +21,7 @@ module FFI
              :ru_nsignals, :long,
              :ru_nvcsw, :long,
              :ru_nivcsw, :long
+
     end
   end
 end

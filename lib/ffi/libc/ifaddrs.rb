@@ -74,7 +74,7 @@ module FFI
       # @return [Sockaddr]
       #   The broadcast address.
       #
-      def ifa_broadaddr
+      def broadaddr
         Sockaddr.new(self[:ifa_ifu][:ifu_broadaddr])
       end
 
@@ -84,7 +84,7 @@ module FFI
       # @return [Sockaddr]
       #   The destination address.
       #
-      def ifa_dstaddr
+      def dstaddr
         Sockaddr.new(self[:ifa_ifu][:ifu_dstaddr])
       end
 

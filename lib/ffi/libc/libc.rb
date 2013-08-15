@@ -185,10 +185,13 @@ module FFI
     attach_function :sys_getrusage, :getrusage, [:int, :pointer], :int
 
     def self.getrusage(who=RUSAGE_SELF)
-      ru = RUsage.new
-      ret = sys_getrusage(who, ru)
-      raise_error(ret) unless ret == 0
-      ru
+      rusage = RUsage.new
+
+      unless (ret = sys_getrusage(who,rusage)) == 0
+        raise_error(ret)
+      end
+
+      return rusage
     end
   end
 end

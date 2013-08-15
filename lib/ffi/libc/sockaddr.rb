@@ -8,9 +8,8 @@ module FFI
     #
     class Sockaddr < SockaddrFamily
 
-      layout :len, :uint8,
-             :family, :sa_family_t,
-             :data, :char
+      layout :family, :sa_family_t,
+             :data,   [:char, 14]
 
     end
   end

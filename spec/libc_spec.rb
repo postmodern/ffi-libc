@@ -16,7 +16,7 @@ describe FFI::LibC do
         addrs << ifaddr
       end
 
-      expect(addrs.all? { |addr| addr.kind_of?(Ifaddrs) }).to be_true
+      expect(addrs).to all(be_kind_of(Ifaddrs))
     end
 
     context "when not given a block" do

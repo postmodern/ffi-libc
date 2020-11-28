@@ -1,4 +1,6 @@
-doc
-pkg
-.bundle
-.yardoc
+/Gemfile.lock
+/doc/
+/pkg/
+/.bundle
+/.yardoc
+/vendor/bundle

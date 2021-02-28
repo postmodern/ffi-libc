@@ -1,5 +1,7 @@
 # ffi-libc
 
+[![CI](https://github.com/postmodern/ffi-libc/actions/workflows/ruby.yml/badge.svg)](https://github.com/postmodern/ffi-libc/actions/workflows/ruby.yml)
+
 * [Source](https://github.com/postmodern/ffi-libc/)
 * [Issues](https://github.com/postmodern/ffi-libc/issues)
 * [Documentation](http://rubydoc.info/gems/ffi-libc)

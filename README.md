@@ -109,7 +109,9 @@ Useful Ruby FFI bindings for `libc`.
 
 ## Install
 
-    $ gem install ffi-libc
+```shell
+$ gem install ffi-libc
+```
 
 ### gemspec
 

@@ -31,7 +31,7 @@
 * Skip `clearenv`, `memrchr`, `stdin`, `stdout` and `stderr` if they cannot
   be loaded (thanks FreneticEntropy and mephux).
   * The `libc` installed on OSX lacks these functions/global-variables.
-* Opt into [test.rubygems.org](http://test.rubygems.org/).
+* Opt into `test.rubygems.org`.
 
 ### 0.0.4 / 2011-02-03
 

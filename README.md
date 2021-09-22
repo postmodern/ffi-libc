@@ -111,6 +111,18 @@ Useful Ruby FFI bindings for `libc`.
 
     $ gem install ffi-libc
 
+### gemspec
+
+```ruby
+gem.add_dependency 'ffi-libc', '~> 0.1'
+```
+
+### Gemfile
+
+```ruby
+gem 'ffi-libc', '~> 0.1'
+```
+
 ## License
 
 Copyright (c) 2010-2021 Hal Brodigan

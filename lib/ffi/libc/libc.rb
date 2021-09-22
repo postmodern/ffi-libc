@@ -16,6 +16,11 @@ module FFI
     NULL = nil
 
     # errno.h
+    begin
+      attach_variable :sys_errlist, :pointer
+      attach_variable :sys_nerr, :int
+    rescue FFI::NotFoundError
+    end
     attach_variable :errno, :int
 
     def self.raise_error(error=self.errno)

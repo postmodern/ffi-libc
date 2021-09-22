@@ -5,7 +5,7 @@
 
 * [Source](https://github.com/postmodern/ffi-libc/)
 * [Issues](https://github.com/postmodern/ffi-libc/issues)
-* [Documentation](http://rubydoc.info/gems/ffi-libc)
+* [Documentation](https://rubydoc.info/gems/ffi-libc)
 
 ## Description
 

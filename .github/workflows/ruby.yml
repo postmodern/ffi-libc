@@ -1,10 +1,6 @@
 name: CI
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: ['**']
+on: [ push, pull_request ]
 
 jobs:
   tests:
@@ -17,7 +13,9 @@ jobs:
           - 2.5
           - 2.6
           - 2.7
+          - 3.0
           - jruby
+          - truffleruby
     name: Ruby ${{ matrix.ruby }}
     steps:
       - uses: actions/checkout@v2

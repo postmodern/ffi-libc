@@ -8,6 +8,12 @@ email: postmodern.mod3@gmail.com
 homepage: https://github.com/postmodern/ffi-libc#redme
 has_yard: true
 
+metadata:
+  documentation_uri: https://rubydoc.info/gems/ffi-libc
+  source_code_uri:   https://github.com/postmodern/ffi-libc
+  bug_tracker_uri:   https://github.com/postmodern/ffi-libc/issues
+  changelog_uri:     https://github.com/postmodern/ffi-libc/blob/master/ChangeLog.md
+
 dependencies:
   ffi: ~> 1.0
 

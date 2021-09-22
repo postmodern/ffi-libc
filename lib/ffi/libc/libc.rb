@@ -16,8 +16,6 @@ module FFI
     NULL = nil
 
     # errno.h
-    attach_variable :sys_errlist, :pointer
-    attach_variable :sys_nerr, :int
     attach_variable :errno, :int
 
     def self.raise_error(error=self.errno)

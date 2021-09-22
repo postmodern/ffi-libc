@@ -28,8 +28,6 @@ Useful Ruby FFI bindings for `libc`.
   * {FFI::LibC::RUsage}
 * Binds to common functions and global variables in `libc`:
   * `errno.h`:
-    * `sys_errlist`
-    * `sys_nerr`
     * `errno`
   * `unistd.h`:
     * `brk`

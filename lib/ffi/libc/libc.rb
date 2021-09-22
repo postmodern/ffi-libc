@@ -17,6 +17,8 @@ module FFI
 
     # errno.h
     begin
+      # NOTE: these global variables are still available on BSD libc, but have
+      # been deprecated and removed from glibc.
       attach_variable :sys_errlist, :pointer
       attach_variable :sys_nerr, :int
     rescue FFI::NotFoundError

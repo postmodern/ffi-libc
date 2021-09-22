@@ -6,7 +6,6 @@
 * [Source](https://github.com/postmodern/ffi-libc/)
 * [Issues](https://github.com/postmodern/ffi-libc/issues)
 * [Documentation](http://rubydoc.info/gems/ffi-libc)
-* [Email](postmodern.mod3 at gmail.com)
 
 ## Description
 

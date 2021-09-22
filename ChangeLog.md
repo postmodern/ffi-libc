@@ -1,3 +1,10 @@
+### 0.1.1 / 2021-09-22
+
+* Removed `sys_errlist` and `sys_nerr` variables, as they have been removed
+  from glibc (see:
+  https://sourceware.org/pipermail/libc-announce/2020/000029.html).
+* Load `libc` via `FFI::Library::LIBC`.
+
 ### 0.1.0 / 2013-08-15
 
 * Require ffi ~> 1.0.

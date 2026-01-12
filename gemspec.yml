@@ -18,4 +18,4 @@ dependencies:
   ffi: ~> 1.0
 
 development_dependencies:
-  bundler: ~> 2.0
+  bundler: ">= 2.0.0"
